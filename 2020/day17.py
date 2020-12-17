@@ -37,8 +37,7 @@ def main():
 				if (ii, jj, kk, ll) == (0, 0, 0, 0): continue
 				nei[(i + ii, j + jj, k + kk, l + ll)] += 1
 		b = set()
-		for tup, cnt in nei.items():
-			i, j, k, l = tup
+		for (i, j, k, l), cnt in nei.items():
 			if (i, j, k, l) in a:
 				if 2 <= cnt <= 3:
 					b.add((i, j, k, l))
