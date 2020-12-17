@@ -30,42 +30,35 @@ def main():
 	file = open("in.txt", "r")
 	lines = [line.strip() for line in file.readlines()]
 
-	mx = 15
 	def f(a):
-		b = defaultdict(default)
-		for i in range(-mx, mx):
-			for j in range(-mx, mx):
-				print(i, j)
-				sys.stdout.flush()
-				for k in range(-mx, mx):
-					for l in range(-mx, mx):
-						cnt = 0
-						for ii in range(-1, 2):
-							for jj in range(-1, 2):
-								for kk in range(-1, 2):
-									for ll in range(-1, 2):
-										if ii == 0 and jj == 0 and kk == 0 and ll == 0: continue
-										cnt += a[(i + ii, j + jj, k + kk, l + ll)]
-
-						on = a[(i, j, k, l)] == 1
-						if on:
-							b[(i, j, k, l)] = 1 if 2 <= cnt <= 3 else 0
-						else:
-							b[(i, j, k, l)] = 1 if cnt == 3 else 0
+		nei = defaultdict(default)
+		for i, j, k, l, in a:
+			for ii, jj, kk, ll in itertools.product([-1, 0, 1], repeat = 4):
+				if (ii, jj, kk, ll) == (0, 0, 0, 0): continue
+				nei[(i + ii, j + jj, k + kk, l + ll)] += 1
+		b = set()
+		for tup, cnt in nei.items():
+			i, j, k, l = tup
+			if (i, j, k, l) in a:
+				if 2 <= cnt <= 3:
+					b.add((i, j, k, l))
+			else:
+				if cnt == 3:
+					b.add((i, j, k, l))
 		return b
 
-	a = defaultdict(default)
+	a = set()
 	n = len(lines)
 	for i in range(n):
 		for j in range(n):
 			if lines[i][j] == '#':
-				a[(i, j, 0, 0)] = 1
+				a.add((i, j, 0, 0))
 	
 	print(a)
 	for i in range(6):
 		a = f(a)			
 
-	print(sum(a.values()))
+	print(len(a))
 
 
 if __name__ == "__main__":
