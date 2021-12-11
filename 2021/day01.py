@@ -25,7 +25,7 @@ def defaultList():
 def neighbors(x, y, diag = False):
 	vectors = [
 		[(1, 0), (-1, 0), (0, 1), (0, -1)],
-		[(1, 1), (1, 0), (1, -1), (0, 1), (0, 1), (-1, 1), (-1, 0), (-1, -1)]
+		[(1, 1), (1, 0), (1, -1), (0, 1), (0, -1), (-1, 1), (-1, 0), (-1, -1)]
 	][diag]
 	print(vectors)
 	return [(x + vectors[i][0], y + vectors[i][1]) for i in range(len(vectors))]
