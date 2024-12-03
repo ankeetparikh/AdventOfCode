@@ -24,7 +24,6 @@ def solve1(input):
         else:
           b[i][j] = neigh_on == 3
     a, b = b, a
-  # print(a)
   print("Part 1:", np.count_nonzero(a))
 
 def solve2(input):

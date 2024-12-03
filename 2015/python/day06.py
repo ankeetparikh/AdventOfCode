@@ -19,7 +19,7 @@ def solve(input):
       b[b < 0] = 0
 
   print("Part 1:", np.count_nonzero(a))
-  # print("Part 2:", b.sum())
+  print("Part 2:", b.sum())
 
 
 import sys
