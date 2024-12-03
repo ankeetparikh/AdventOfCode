@@ -1,6 +1,14 @@
 # Advent of Code
 This repo holds my solutions to [advent of code](https://adventofcode.com/). The runtime is for both parts!
 
+## 2024
+| Day      | Python |
+| -------- | -------|
+| 1 | [0.05 s](2024/python/day01.py) |
+| 2 | [0.05 s](2024/python/day02.py) |
+| 3 | [0.02 s](2024/python/day03.py) |
+
+
 ## 2015
 | Day      | Python |
 | -------- | -------|
@@ -29,10 +37,3 @@ This repo holds my solutions to [advent of code](https://adventofcode.com/). The
 | 23 | [0.01 s](2015/python/day23.py) |
 | 24 | [0.09 s](2015/python/day24.py) |
 | 25 | [0.01 s](2015/python/day25.py) |
-
-## 2024
-| Day      | Python |
-| -------- | -------|
-| 1 | [0.05 s](2024/python/day01.py) |
-| 2 | [0.05 s](2024/python/day02.py) |
-| 3 | [0.02 s](2024/python/day03.py) |
