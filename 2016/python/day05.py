@@ -12,7 +12,7 @@ def solve1(s):
 			ans += x[5]
 			f += 1
 		i += 1
-	print(ans)
+	print("Part 1:", ans)
 
 def solve2(s):
 	s = s.strip().split("\n")
@@ -29,20 +29,18 @@ def solve2(s):
 				ans[pos] = val
 				f += 1
 		i += 1
-	print(''.join(ans))
+	print("Part 2:", ''.join(ans))
 
 
 def solve(s):
 	solve1(s)
 	solve2(s)
 
-solve(
-'''
-abc
-'''
-)
-solve(
-'''
-reyedfim
-'''
-)
+# solve(
+# '''
+# abc
+# '''
+# )
+with open('../inputs/day05input.txt') as f:
+  s = f.read()
+solve(s)
