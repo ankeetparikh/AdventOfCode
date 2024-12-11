@@ -14,6 +14,7 @@ This repo holds my solutions to [advent of code](https://adventofcode.com/). The
 | 8 | [0.04 s](2024/python/day08.py) |
 | 9 | [0.14 s](2024/python/day09.py) |
 | 10 | [0.05 s](2024/python/day10.py) |
+| 11 | [0.13 s](2024/python/day11.py) |
 
 
 ## 2015
