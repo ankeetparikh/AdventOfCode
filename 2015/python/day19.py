@@ -26,7 +26,6 @@ def solve(input):
   #   if not has_rec: return inf
   #   return best
   # print("Part 2:", rec(mo))
-
 solve("""
 e => H
 e => O
